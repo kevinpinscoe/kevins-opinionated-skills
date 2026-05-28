@@ -5,8 +5,8 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-WorkingDirectory=/home/kinscoe/Journal/Personal Journal
-ExecStart=/home/kinscoe/.local/bin/get-weekly-wx-wrapper.sh
+WorkingDirectory=%h/Journal/Personal Journal
+ExecStart=%h/.local/bin/get-weekly-wx-wrapper.sh
 StandardOutput=journal
 StandardError=journal
 SyslogIdentifier=get-weekly-wx
