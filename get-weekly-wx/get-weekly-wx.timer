@@ -1,0 +1,9 @@
+[Unit]
+Description=Run WEATHERAmerica weather forecast generator every Sunday at 7:00 AM
+
+[Timer]
+OnCalendar=Sun *-*-* 07:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

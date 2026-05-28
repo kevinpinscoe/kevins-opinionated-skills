@@ -1,0 +1,12 @@
+[Unit]
+Description=WEATHERAmerica Weekly Weather Forecast Generator for Eastern Tennessee
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/kinscoe/Journal/Personal Journal
+ExecStart=/home/kinscoe/.local/bin/get-weekly-wx-wrapper.sh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=get-weekly-wx
