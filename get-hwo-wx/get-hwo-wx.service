@@ -1,0 +1,16 @@
+[Unit]
+Description=NWS Morristown TN Hazardous Weather Outlook fetcher
+Documentation=file:%h/ai/fedora/wx-get-mrx-hwo/RUNBOOK.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Journal/Personal Journal
+ExecStart=%h/.local/bin/get-hwo-wx-wrapper.sh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=get-hwo-wx
+
+[Install]
+WantedBy=default.target
