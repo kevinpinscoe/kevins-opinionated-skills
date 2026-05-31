@@ -64,6 +64,11 @@ Write a narrative prose forecast for the next 72 hours for Eastern Tennessee. In
 - Day-by-day prose (Today / Tonight / Tomorrow / Tomorrow Night / Day 3) — do not use a table, use flowing sentences
 - A dedicated **Hazards** paragraph if any hazard information was present; lead it with `> **⚠️ Weather Hazard:**` as a blockquote. If no hazards were reported, omit this section entirely.
 - Highlight temperature extremes, significant wind events, heavy precipitation, winter weather, or severe storm threats as they arise naturally in the narrative
+- A source footer at the very end:
+  ```
+  ---
+  _Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
+  ```
 
 If **neither** Short Range nor Weather Hazards posts were found, write:
 
@@ -73,6 +78,9 @@ If **neither** Short Range nor Weather Hazards posts were found, write:
 _Generated: YYYY-MM-DD HH:MM_
 
 No forecast guidance for this time period was received from WEATHERAmerica.
+
+---
+_Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
 ```
 
 ---
@@ -100,6 +108,13 @@ Then for each day of that Sunday–Saturday week, write a section:
 
 Maintain continuity across days — if a pattern persists (e.g. a multi-day rain event), acknowledge that in the narrative rather than repeating identical language.
 
+After all day sections, add a source footer:
+
+```
+---
+_Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
+```
+
 If **no** Medium Range post was found, write:
 
 ```
@@ -108,6 +123,9 @@ If **no** Medium Range post was found, write:
 _Generated: YYYY-MM-DD HH:MM_
 
 No forecast guidance for this time period was received from WEATHERAmerica.
+
+---
+_Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
 ```
 
 ---
@@ -123,6 +141,11 @@ Write a narrative outlook for the next 30 days for Eastern Tennessee. Include:
 - A lead paragraph summarizing the overall pattern (above/below normal temps, wetter/drier than average, dominant systems)
 - Week-by-week prose sections (Week 1, Week 2, Week 3–4) if the data supports that breakdown; otherwise write a single flowing extended outlook
 - Call out any significant pattern shifts, blocking patterns, or notable events the guidance suggests
+- A source footer at the very end:
+  ```
+  ---
+  _Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
+  ```
 
 If **neither** an Extended Period post **nor** a Medium Range post was found, write:
 
@@ -132,6 +155,9 @@ If **neither** an Extended Period post **nor** a Medium Range post was found, wr
 _Generated: YYYY-MM-DD HH:MM_
 
 No forecast guidance for this time period was received from WEATHERAmerica.
+
+---
+_Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
 ```
 
 ---

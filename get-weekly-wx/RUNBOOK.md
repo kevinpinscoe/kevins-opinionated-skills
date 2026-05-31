@@ -15,7 +15,7 @@
 
 ## Purpose
 
-Runs the `get-weekly-wx` Claude Code skill every Sunday at 7:00 AM local time. The skill fetches WEATHERAmerica forecast posts from the public Google Groups page and writes three WX forecast Markdown files to the `WX/` subdirectory of the Personal Journal Obsidian vault.
+Runs the `get-weekly-wx` Claude Code skill every Sunday at 7:00 AM and 7:00 PM local time. The skill fetches WEATHERAmerica forecast posts from the public Google Groups page and writes three WX forecast Markdown files to the `WX/` subdirectory of the Personal Journal Obsidian vault. Each output file includes a source attribution footer linking back to the WEATHERAmerica Google Group.
 
 ---
 
