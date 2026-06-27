@@ -6,7 +6,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-WorkingDirectory=%h/Journal/Personal Journal
+WorkingDirectory=%h/Journal/personal-journal
 ExecStart=%h/.local/bin/get-hwo-wx-wrapper.sh
 StandardOutput=journal
 StandardError=journal

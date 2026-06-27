@@ -91,7 +91,7 @@ Each skill's `install.sh` creates a **real directory** under `~/ai/fedora/` cont
   # If "Linger=no":
   sudo loginctl enable-linger kinscoe
   ```
-- [ ] Obsidian vault at `~/Journal/Personal Journal/WX/` exists
+- [ ] Obsidian vault at `~/Journal/personal-journal/WX/` exists
 
 ---
 

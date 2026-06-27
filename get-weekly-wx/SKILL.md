@@ -167,7 +167,7 @@ _Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
 After writing all three output files, commit and push the changes to the journal repository:
 
 ```bash
-cd "/home/kinscoe/Journal/Personal Journal"
+cd "/home/kinscoe/Journal/personal-journal"
 git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md
 git commit -m "Weekly WEATHERAmerica updates"
 git push

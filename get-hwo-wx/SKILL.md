@@ -1,6 +1,6 @@
 # Skill: get-hwo-wx
 
-Fetch the Hazardous Weather Outlook (HWO) issued by the National Weather Service Morristown TN (MRX) and write it as Markdown to `WX/WX-HAZARD.md` in the Personal Journal vault.
+Fetch the Hazardous Weather Outlook (HWO) issued by the National Weather Service Morristown TN (MRX) and write it as Markdown to `WX/WX-HAZARD.md` in the personal-journal vault.
 
 ---
 
@@ -52,7 +52,7 @@ Extract:
 
 ## Step 3 — Write `WX/WX-HAZARD.md`
 
-Write to `WX/WX-HAZARD.md` relative to the WorkingDirectory (the Personal Journal vault). Always overwrite the existing file.
+Write to `WX/WX-HAZARD.md` relative to the WorkingDirectory (the personal-journal vault). Always overwrite the existing file.
 
 Format:
 
@@ -86,7 +86,7 @@ Conversion rules:
 After writing the file, check whether the content changed and commit only if it did:
 
 ```bash
-cd "/home/kinscoe/Journal/Personal Journal"
+cd "/home/kinscoe/Journal/personal-journal"
 git add WX/WX-HAZARD.md
 git diff --cached --quiet && echo "No change — skipping commit." || git commit -m "Update HWO"
 git push

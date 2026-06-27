@@ -15,7 +15,7 @@
 
 ## Purpose
 
-Runs the `get-weekly-wx` Claude Code skill every Sunday at 7:00 AM and 7:00 PM local time. The skill fetches WEATHERAmerica forecast posts from the public Google Groups page and writes three WX forecast Markdown files to the `WX/` subdirectory of the Personal Journal Obsidian vault. Each output file includes a source attribution footer linking back to the WEATHERAmerica Google Group.
+Runs the `get-weekly-wx` Claude Code skill every Sunday at 7:00 AM and 7:00 PM local time. The skill fetches WEATHERAmerica forecast posts from the public Google Groups page and writes three WX forecast Markdown files to the `WX/` subdirectory of the personal-journal Obsidian vault. Each output file includes a source attribution footer linking back to the WEATHERAmerica Google Group.
 
 The timer fires twice because WEATHERAmerica posts have been arriving later and later on Sundays — sometimes not until mid-day. The 7am run captures early posts; the 7pm run picks up anything that came in after the morning window.
 
@@ -65,7 +65,7 @@ Canonical files live in the repo:
 
 - [ ] `~/.local/bin/claude` installed (Claude Code CLI)
 - [ ] Linger enabled: `loginctl show-user kinscoe | grep Linger` — if `Linger=no`: `sudo loginctl enable-linger kinscoe`
-- [ ] Obsidian vault at `~/Journal/Personal Journal/WX/` exists
+- [ ] Obsidian vault at `~/Journal/personal-journal/WX/` exists
 
 ---
 
@@ -76,7 +76,7 @@ Canonical files live in the repo:
 | **Runtime** | `claude --dangerously-skip-permissions -p` |
 | **Systemd mode** | User unit (`systemctl --user`) — runs as `kinscoe` |
 | **Data source** | WEATHERAmerica Google Groups public page (WebFetch) |
-| **Output** | `~/Journal/Personal Journal/WX/` |
+| **Output** | `~/Journal/personal-journal/WX/` |
 
 ---
 

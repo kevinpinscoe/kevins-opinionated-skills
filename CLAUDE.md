@@ -14,7 +14,7 @@ Always use `~` (tilde) for home-relative paths — never hardcode `/home/kinscoe
 
 Examples:
 - Shell scripts: `~/Projects/...` not `/home/kinscoe/Projects/...`
-- Systemd service: `WorkingDirectory=%h/Journal/Personal Journal`
+- Systemd service: `WorkingDirectory=%h/Journal/personal-journal`
 
 ## Skill directory layout
 

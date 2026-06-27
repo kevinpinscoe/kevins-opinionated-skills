@@ -19,7 +19,7 @@ Fetches the **Hazardous Weather Outlook (HWO)** issued by the National Weather S
 
     https://forecast.weather.gov/product.php?site=NWS&issuedby=MRX&product=HWO&format=txt&version=1&glossary=0
 
-The skill parses the plain-text product and writes formatted Markdown to `WX/WX-HAZARD.md` in the Personal Journal vault. It commits and pushes only when the content has changed. If the content is unchanged the file is left untouched and no commit is made.
+The skill parses the plain-text product and writes formatted Markdown to `WX/WX-HAZARD.md` in the personal-journal vault. It commits and pushes only when the content has changed. If the content is unchanged the file is left untouched and no commit is made.
 
 Runs every 4 hours (00:00, 04:00, 08:00, 12:00, 16:00, 20:00) via a systemd user timer.
 
@@ -71,7 +71,7 @@ The `~/ai/fedora/wx-get-mrx-hwo` directory name is preserved from the original s
 
 - [ ] `~/.local/bin/claude` installed (Claude Code CLI)
 - [ ] Linger enabled: `loginctl show-user kinscoe | grep Linger` — if `Linger=no`: `sudo loginctl enable-linger kinscoe`
-- [ ] Obsidian vault at `~/Journal/Personal Journal/WX/` exists and is a git repo
+- [ ] Obsidian vault at `~/Journal/personal-journal/WX/` exists and is a git repo
 
 ---
 
@@ -82,7 +82,7 @@ The `~/ai/fedora/wx-get-mrx-hwo` directory name is preserved from the original s
 | **Runtime** | `claude --dangerously-skip-permissions -p` |
 | **Data fetch** | `WebFetch` tool inside the Claude skill |
 | **Systemd mode** | User unit (`systemctl --user`) — runs as `kinscoe` |
-| **Output** | `~/Journal/Personal Journal/WX/WX-HAZARD.md` |
+| **Output** | `~/Journal/personal-journal/WX/WX-HAZARD.md` |
 
 No curl, Python, or pip packages required.
 
