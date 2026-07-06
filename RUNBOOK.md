@@ -1,3 +1,11 @@
+---
+title: RUNBOOK.md — Kevin's Opinionated Skills
+tags: [runbook, operations]
+vault_link: runbooks/home-kinscoe-projects-public-kevins-opinionated-skills.md
+source_path: /home/kinscoe/Projects/public/kevins-opinionated-skills/RUNBOOK.md
+---
+
+> 📓 Indexed in the PKM knowledge vault at `runbooks/home-kinscoe-projects-public-kevins-opinionated-skills.md` (symlink → this file).
 # RUNBOOK.md — Kevin's Opinionated Skills
 
 ## Metadata

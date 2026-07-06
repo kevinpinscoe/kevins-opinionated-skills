@@ -1,3 +1,11 @@
+---
+title: RUNBOOK: get-weekly-wx
+tags: [runbook, operations]
+vault_link: runbooks/home-kinscoe-projects-public-kevins-opinionated-skills-get-weekly-wx.md
+source_path: /home/kinscoe/Projects/public/kevins-opinionated-skills/get-weekly-wx/RUNBOOK.md
+---
+
+> 📓 Indexed in the PKM knowledge vault at `runbooks/home-kinscoe-projects-public-kevins-opinionated-skills-get-weekly-wx.md` (symlink → this file).
 # RUNBOOK: get-weekly-wx
 
 ## Metadata

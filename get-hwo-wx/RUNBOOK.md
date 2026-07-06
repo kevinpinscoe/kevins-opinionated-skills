@@ -1,3 +1,11 @@
+---
+title: RUNBOOK: get-hwo-wx
+tags: [runbook, operations]
+vault_link: runbooks/home-kinscoe-projects-public-kevins-opinionated-skills-get-hwo-wx.md
+source_path: /home/kinscoe/Projects/public/kevins-opinionated-skills/get-hwo-wx/RUNBOOK.md
+---
+
+> 📓 Indexed in the PKM knowledge vault at `runbooks/home-kinscoe-projects-public-kevins-opinionated-skills-get-hwo-wx.md` (symlink → this file).
 # RUNBOOK: get-hwo-wx
 
 ## Metadata
