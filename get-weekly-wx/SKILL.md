@@ -162,18 +162,55 @@ _Source: [WEATHERAmerica](https://groups.google.com/g/weatheramerica)_
 
 ---
 
-## Step 6 — Commit and push WX files
+## Step 6 — Regenerate the WX index (`WX/wx.md`)
 
-After writing all three output files, commit and push the changes to the journal repository:
+After writing the three forecast files, regenerate the index file `WX/wx.md` so it always reflects the freshly written output. This is the human-facing table of contents for the `WX/` directory in Obsidian.
+
+Build the index by reading the current state of the four WX files (the three you just wrote **plus** `WX/WX-HAZARD.md`, which is maintained by the separate `get-hwo-wx` skill). For each file's **Created** value, use the timestamp from that file's own `_Generated:` header line; if a file has no such header, fall back to its filesystem modification time.
+
+Overwrite `WX/wx.md` with exactly this structure:
+
+```
+---
+tags:
+  - weather
+aliases: []
+action: generated
+---
+
+# Weather Forecast Index
+
+_Index regenerated: YYYY-MM-DD HH:MM UTC_
+
+| Forecast | File | Created |
+|---|---|---|
+| Weather summary for the next 72 hours | [WX-THE-NEXT-72-HOURS.md](WX-THE-NEXT-72-HOURS.md) | <created> |
+| <title of WX-THIS-WEEK.md, e.g. Weekly Forecast for Sunday July 12 through Saturday July 18> | [WX-THIS-WEEK.md](WX-THIS-WEEK.md) | <created> |
+| Weather summary for the next 30 days | [WX-NEXT-30-DAY.md](WX-NEXT-30-DAY.md) | <created> |
+| Hazardous Weather Outlook | [WX-HAZARD.md](WX-HAZARD.md) | <created> |
+```
+
+Notes:
+
+- The `_Index regenerated:` line is the current UTC time of this run.
+- The **Forecast** column is each file's human-readable title (the `# ` heading text). For `WX-THIS-WEEK.md`, use its full week-span title so the index shows the current week.
+- Preserve the frontmatter block (`tags`, `aliases`, `action`) exactly as shown.
+- If `WX/WX-HAZARD.md` does not exist, omit its row rather than writing a broken link.
+
+---
+
+## Step 7 — Commit and push WX files
+
+After writing all three output files **and** the regenerated index, commit and push the changes to the journal repository:
 
 ```bash
 cd "/home/kinscoe/Journal/personal-journal"
-git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md
+git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md WX/wx.md
 git commit -m "Weekly WEATHERAmerica updates"
 git push
 ```
 
-If any of the three files was not changed (no diff), git will simply skip it — that is expected. The push must succeed; if it fails, report the error.
+If any of the four files was not changed (no diff), git will simply skip it — that is expected. The push must succeed; if it fails, report the error.
 
 ---
 
