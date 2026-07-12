@@ -27,7 +27,7 @@ Fetches the **Hazardous Weather Outlook (HWO)** issued by the National Weather S
 
     https://forecast.weather.gov/product.php?site=NWS&issuedby=MRX&product=HWO&format=txt&version=1&glossary=0
 
-The skill parses the plain-text product and writes formatted Markdown to `WX/WX-HAZARD.md` in the personal-journal vault. It commits and pushes only when the content has changed. If the content is unchanged the file is left untouched and no commit is made.
+The skill parses the plain-text product and writes formatted Markdown to `WX/WX-HAZARD.md` in the personal-journal vault, then regenerates the `WX/wx.md` index (the table-of-contents linking all four WX files). Both files are gitignored, so they update on disk only; the commit/push step is a no-op unless a tracked file changed. Obsidian reads both directly from disk.
 
 Runs every 4 hours (00:00, 04:00, 08:00, 12:00, 16:00, 20:00) via a systemd user timer.
 

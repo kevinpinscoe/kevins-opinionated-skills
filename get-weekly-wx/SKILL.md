@@ -196,21 +196,22 @@ Notes:
 - The **Forecast** column is each file's human-readable title (the `# ` heading text). For `WX-THIS-WEEK.md`, use its full week-span title so the index shows the current week.
 - Preserve the frontmatter block (`tags`, `aliases`, `action`) exactly as shown.
 - If `WX/WX-HAZARD.md` does not exist, omit its row rather than writing a broken link.
+- `WX/wx.md` is **gitignored** (generated index content) — write it to disk only. Do **not** `git add` it in Step 7; Obsidian reads it directly from disk.
 
 ---
 
 ## Step 7 — Commit and push WX files
 
-After writing all three output files **and** the regenerated index, commit and push the changes to the journal repository:
+After writing all three forecast files, commit and push them to the journal repository. Note that only the three forecast files are tracked — `WX/wx.md` is gitignored and must not be added here (adding an ignored path makes `git add` warn and exit non-zero):
 
 ```bash
 cd "/home/kinscoe/Journal/personal-journal"
-git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md WX/wx.md
+git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md
 git commit -m "Weekly WEATHERAmerica updates"
 git push
 ```
 
-If any of the four files was not changed (no diff), git will simply skip it — that is expected. The push must succeed; if it fails, report the error.
+If any of the three files was not changed (no diff), git will simply skip it — that is expected. The push must succeed; if it fails, report the error.
 
 ---
 

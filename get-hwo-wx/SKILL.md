@@ -81,7 +81,45 @@ Conversion rules:
 
 ---
 
-## Step 4 — Commit and push
+## Step 4 — Regenerate the WX index (`WX/wx.md`)
+
+After writing `WX/WX-HAZARD.md`, regenerate the index file `WX/wx.md` so its **Hazardous Weather Outlook** row reflects the outlook you just wrote. This is the human-facing table of contents for the `WX/` directory in Obsidian, shared with the `get-weekly-wx` skill.
+
+Build the index by reading the current state of the four WX files (`WX-HAZARD.md`, which you just wrote, plus the three forecast files maintained by `get-weekly-wx`). For each file's **Created** value, use the timestamp from that file's own `_Generated:` header line; if a file has no such header, fall back to its filesystem modification time.
+
+Overwrite `WX/wx.md` with exactly this structure:
+
+```
+---
+tags:
+  - weather
+aliases: []
+action: generated
+---
+
+# Weather Forecast Index
+
+_Index regenerated: YYYY-MM-DD HH:MM UTC_
+
+| Forecast | File | Created |
+|---|---|---|
+| Weather summary for the next 72 hours | [WX-THE-NEXT-72-HOURS.md](WX-THE-NEXT-72-HOURS.md) | <created> |
+| <title of WX-THIS-WEEK.md, e.g. Weekly Forecast for Sunday July 12 through Saturday July 18> | [WX-THIS-WEEK.md](WX-THIS-WEEK.md) | <created> |
+| Weather summary for the next 30 days | [WX-NEXT-30-DAY.md](WX-NEXT-30-DAY.md) | <created> |
+| Hazardous Weather Outlook | [WX-HAZARD.md](WX-HAZARD.md) | <created> |
+```
+
+Notes:
+
+- The `_Index regenerated:` line is the current UTC time of this run.
+- The **Forecast** column is each file's human-readable title (the `# ` heading text). For `WX-THIS-WEEK.md`, use its full week-span title.
+- Preserve the frontmatter block (`tags`, `aliases`, `action`) exactly as shown.
+- If any of the three forecast files does not yet exist, omit its row rather than writing a broken link.
+- `WX/wx.md` is **gitignored** (generated index content) — write it to disk only. Do **not** `git add` it in Step 5; Obsidian reads it directly from disk.
+
+---
+
+## Step 5 — Commit and push
 
 After writing the file, check whether the content changed and commit only if it did:
 
@@ -93,3 +131,5 @@ git push
 ```
 
 If the content is unchanged (diff is empty), print "No change detected — WX/WX-HAZARD.md is current." and do not commit. The push must succeed; if it fails, report the error to stdout.
+
+> Note: `WX/WX-HAZARD.md` and `WX/wx.md` are both gitignored (generated content), so this step typically stages nothing and reports "No change" — the on-disk file updates are the operative result. Do not force-add either path.
