@@ -29,7 +29,7 @@ CLAUDE="$HOME/.local/bin/claude"
 STAT=/usr/bin/stat
 DATE=/usr/bin/date
 
-HAZARD="${HAZARD:-$HOME/Journal/personal-journal/WX/WX-HAZARD.md}"
+HAZARD="${HAZARD:-$HOME/Journal/personal-journal/personal-journal/WX/WX-HAZARD.md}"
 MIN_BYTES="${MIN_BYTES:-300}"
 
 log() { echo "[$($DATE '+%Y-%m-%d %H:%M:%S')] $*"; }

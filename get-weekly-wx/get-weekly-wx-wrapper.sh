@@ -32,7 +32,7 @@ CLAUDE="$HOME/.local/bin/claude"
 STAT=/usr/bin/stat
 DATE=/usr/bin/date
 
-WX_DIR="${WX_DIR:-$HOME/Journal/personal-journal/WX}"
+WX_DIR="${WX_DIR:-$HOME/Journal/personal-journal/personal-journal/WX}"
 OUTPUTS=(WX-THE-NEXT-72-HOURS.md WX-THIS-WEEK.md WX-NEXT-30-DAY.md)
 MIN_BYTES="${MIN_BYTES:-100}"
 
