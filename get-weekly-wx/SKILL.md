@@ -205,7 +205,7 @@ Notes:
 After writing all three forecast files, commit and push them to the journal repository. Note that only the three forecast files are tracked — `WX/wx.md` is gitignored and must not be added here (adding an ignored path makes `git add` warn and exit non-zero):
 
 ```bash
-cd "/home/kinscoe/Journal/personal-journal"
+cd "/home/kinscoe/Journal/personal-journal/personal-journal"
 git add WX/WX-THE-NEXT-72-HOURS.md WX/WX-THIS-WEEK.md WX/WX-NEXT-30-DAY.md
 git commit -m "Weekly WEATHERAmerica updates"
 git push

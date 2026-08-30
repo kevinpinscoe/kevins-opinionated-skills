@@ -79,7 +79,7 @@ The `~/ai/fedora/wx-get-mrx-hwo` directory name is preserved from the original s
 
 - [ ] `~/.local/bin/claude` installed (Claude Code CLI)
 - [ ] Linger enabled: `loginctl show-user kinscoe | grep Linger` — if `Linger=no`: `sudo loginctl enable-linger kinscoe`
-- [ ] Obsidian vault at `~/Journal/personal-journal/WX/` exists and is a git repo
+- [ ] Obsidian vault at `~/Journal/personal-journal/personal-journal/WX/` exists and is a git repo
 
 ---
 
@@ -90,7 +90,7 @@ The `~/ai/fedora/wx-get-mrx-hwo` directory name is preserved from the original s
 | **Runtime** | `claude --dangerously-skip-permissions -p` |
 | **Data fetch** | `WebFetch` tool inside the Claude skill |
 | **Systemd mode** | User unit (`systemctl --user`) — runs as `kinscoe` |
-| **Output** | `~/Journal/personal-journal/WX/WX-HAZARD.md` |
+| **Output** | `~/Journal/personal-journal/personal-journal/WX/WX-HAZARD.md` |
 
 No curl, Python, or pip packages required.
 

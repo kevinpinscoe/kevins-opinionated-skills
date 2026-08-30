@@ -124,7 +124,7 @@ Notes:
 After writing the file, check whether the content changed and commit only if it did:
 
 ```bash
-cd "/home/kinscoe/Journal/personal-journal"
+cd "/home/kinscoe/Journal/personal-journal/personal-journal"
 git add WX/WX-HAZARD.md
 git diff --cached --quiet && echo "No change — skipping commit." || git commit -m "Update HWO"
 git push

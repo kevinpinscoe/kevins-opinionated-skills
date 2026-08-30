@@ -73,7 +73,7 @@ Canonical files live in the repo:
 
 - [ ] `~/.local/bin/claude` installed (Claude Code CLI)
 - [ ] Linger enabled: `loginctl show-user kinscoe | grep Linger` — if `Linger=no`: `sudo loginctl enable-linger kinscoe`
-- [ ] Obsidian vault at `~/Journal/personal-journal/WX/` exists
+- [ ] Obsidian vault at `~/Journal/personal-journal/personal-journal/WX/` exists
 
 ---
 
@@ -84,7 +84,7 @@ Canonical files live in the repo:
 | **Runtime** | `claude --dangerously-skip-permissions -p` |
 | **Systemd mode** | User unit (`systemctl --user`) — runs as `kinscoe` |
 | **Data source** | WEATHERAmerica Google Groups public page (WebFetch) |
-| **Output** | `~/Journal/personal-journal/WX/` |
+| **Output** | `~/Journal/personal-journal/personal-journal/WX/` |
 
 ---
 
